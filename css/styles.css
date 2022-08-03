@@ -163,6 +163,7 @@ ul {
 .link:hover::after {
   opacity: 1;
   transform: scaleX(1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav li {
   margin-right: 50px;
@@ -199,6 +200,7 @@ ul {
 .tel:focus {
   color: var(--accent-color);
   font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-svg .tel
 /* .site-nav .mail::before {
@@ -485,7 +487,7 @@ textarea {
 }
 .button-submit:hover {
   background-color: #188ce8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-modal-close {
   cursor: pointer;
@@ -503,15 +505,21 @@ textarea {
   border: solid 1px;
   border-color: rgba(0, 0, 0, 0.1);
 }
+.button-modal-close:hover,
+.close-modal-svg:hover {
+  fill: #188ce8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .button:hover {
   background-color: #188ce8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--title-text-color);
   color: #18a0fb;
   font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Hero */
@@ -773,6 +781,7 @@ textarea {
 .team-social-item:hover .team-social-icon {
   background-color: #2196f3;
   fill: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social-icon {
   fill: #afb1b8;
@@ -817,6 +826,7 @@ textarea {
 }
 .clients-item:hover .clients-icon {
   fill: #2196f3;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-item:hover {
   border-color: #2196f3;
@@ -936,6 +946,7 @@ textarea {
   color: #757575;
   color: var(--accent-color);
   font-style: normal;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-item {
   background: rgba(255, 255, 255, 0.1);
@@ -956,6 +967,7 @@ textarea {
 .social-item:hover .social-item-icon,
 .social-item:hover {
   background: #2196f3;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sub-mailing {
   margin-top: 35px;
@@ -984,6 +996,7 @@ textarea {
 } */
 .sub-mail input {
   width: 358px;
+  background-color: #2f303a;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1015,7 +1028,7 @@ textarea {
 }
 .button-sub:hover {
   background-color: #188ce8;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sub-icon {
   fill: #fff;
@@ -1094,7 +1107,7 @@ textarea {
   color: #757575;
   color: var(--accent-color);
   font-style: normal;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .mail {
@@ -1110,7 +1123,7 @@ textarea {
   color: #757575;
   color: #18a0fb;
   font-style: normal;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-join {
   font-family: Roboto, sans-serif;
@@ -1192,7 +1205,7 @@ textarea {
   background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu {
   padding-top: 94px;
