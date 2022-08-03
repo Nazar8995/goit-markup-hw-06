@@ -420,8 +420,8 @@ textarea {
   appearance: none;
 }
 .checkbox:checked + .policy-check {
-  margin-right: 7px;
-  margin-left: 15px;
+  /* margin-right: 7px;
+  margin-left: 15px; */
   fill: #fff;
   background: #2196f3;
   border-radius: 2px;
