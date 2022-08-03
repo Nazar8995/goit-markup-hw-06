@@ -296,6 +296,16 @@ textarea {
   color: ##212121;
   margin: 40px 40px 12px;
 }
+.modal-subtitle {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #757575;
+  padding-bottom: 4px;
+}
 .form {
   width: 528px;
   height: 581px;
@@ -311,24 +321,42 @@ textarea {
   line-height: 14px;
   padding-left: 40px;
   padding-right: 40px;
-  margin-bottom: 10px;
+
+  position: relative;
   text-align: left;
 }
+.form-field:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .form-field input {
   width: 448px;
   height: 40px;
   border-radius: 4px;
   outline: 0px;
-  border-color: #757575;
+  padding-left: 42px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
 }
 .form-field label {
   margin-bottom: 4px;
 }
 .form-field textarea {
+  font-family: Roboto, sans-serif;
+  width: 448px;
+  height: 120px;
+  padding-left: 16px;
+  padding-top: 12px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   outline: 0px;
+}
+.form-field textarea:focus {
+  outline: 1px solid #2196f3;
+}
+
+.form-field input:focus {
+  outline: 1px solid #2196f3;
 }
 .form-field textarea::placeholder {
   font-family: Roboto, sans-serif;
@@ -340,8 +368,28 @@ textarea {
 
   text-align: left;
 }
+.modal-svg {
+  position: absolute;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 12px;
+}
+.position-relative {
+  position: absolute;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  top: 53%;
+  left: 49px;
+}
+.form-field input:focus ~ .position-relative {
+  outline: 0px solid #2196f3;
+  fill: #2196f3;
+}
 .terms {
-  display: flex;
+  /* display: flex;
   font-family: Roboto, sans-serif;
   color: #757575;
   font-style: normal;
@@ -349,16 +397,68 @@ textarea {
   font-size: 14px;
   line-height: 24px;
   padding-left: 52px;
-  padding-right: 52px;
+  padding-right: 52px; */
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.terms-policy {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+  margin-left: 40px;
+  display: block;
+  position: absolute;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-left: 73px;
+}
+.checkbox {
+  position: absolute;
+  left: 30px;
+  appearance: none;
+}
+.checkbox:checked + .policy-check {
+  margin-right: 7px;
+  margin-left: 15px;
+  fill: #fff;
+  background: #2196f3;
+  border-radius: 2px;
+  border: 2px solid #2196f3;
+  display: inline-block;
+  cursor: pointer;
+  /* position: absolute;
+  left: -35px;
+  top: 3px;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+}
+.policy-check {
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  margin-left: 49px;
+  border-radius: 2px;
+  border: 2px solid #212121;
+  display: inline-block;
+  cursor: pointer;
+  fill: #fff;
+  position: absolute;
+  left: -78px;
+  top: 3px;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .terms-span {
   font-family: Roboto, sans-serif;
-  text-decoration: underline;
-  cursor: pointer;
-  color: #2196f3;
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  cursor: pointer;
+  color: #2196f3;
 }
 /* .form-field input[type='checkbox'] {
   width: 16px;
@@ -789,10 +889,15 @@ textarea {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
+  /* background-size: 100%;
   display: flex;
+  width: 1205px;
+  background-size: cover;
+  background-position: center center; */
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .span-logo {
   color: #ffffff;
@@ -853,20 +958,26 @@ textarea {
   background: #2196f3;
 }
 .sub-mailing {
+  margin-top: 35px;
+  margin-left: 92px;
   display: flex;
-  margin-left: 93px;
+  flex-direction: column;
 }
 .pizda {
   display: flex;
 }
+.sub-mail {
+  display: flex;
+}
 .sub-mailing-title {
   font-family: Roboto, sans-serif;
-  color: #fff;
-  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+  padding-bottom: 20px;
+  color: #ffffff;
 }
 /* .sub-mailing {
   display: flex;
@@ -1022,8 +1133,8 @@ textarea {
   margin-top: 20px;
 }
 .footer-container {
-  display: flex;
-  align-items: baseline;
+  /* display: flex;
+  align-items: baseline; */
 }
 /* Портфолио */
 .header__container-portf {
