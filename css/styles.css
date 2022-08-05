@@ -163,7 +163,7 @@ ul {
 .link:hover::after {
   opacity: 1;
   transform: scaleX(1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav li {
   margin-right: 50px;
@@ -975,7 +975,7 @@ textarea {
   display: flex;
   flex-direction: column;
 }
-.pizda {
+.sub-form {
   display: flex;
 }
 .sub-mail {
@@ -1001,6 +1001,9 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  padding: 15px;
+  color: #fff;
+  outline: 0;
 }
 .button-sub {
   color: var(--primary-bg-color);
